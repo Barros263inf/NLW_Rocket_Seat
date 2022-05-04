@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Primary Colors*/
+    --brand-green: #00856F;
+    --brand-beige: #FFFAF1;
+    --brand-green-light: #DCE9E2;
+    --brand-green-hover: #00453A;
+    --brand-green-light-02: #F7F9F9;
+    /*Secondary Colors*/
+    --gray-headline: #212529;
+    --gray-paragraph: #495057;
+    /*Fonts*/
+    --font-default: 'DM Sans', sans-serif;;
+}
+
+.display_flex {
+    display: flex;
+}
+
+body {
+    width: 320px;
+    margin: .1em auto;
+    position: relative;
+    font-family: var(--font-default);
+}
+
+header {
+    /*
+    top: 0;
+    position: sticky;*/
+    background-color: var(--brand-green-light);
+}
+
+nav {
+    width: 100%;
+    padding: .5em 1em;
+    justify-content: space-between;
+}
+
+nav a {
+    color: #000;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+nav a[href=menu] {
+    font-size: 2em;
+    color: var(--brand-green);
+}
+
+a span {
+    color: var(--brand-green);
+}
+
+section {
+    padding: .5em;
+    height: 1080px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#introducao {
+    background-color: var(--brand-green-light);
+}
+
+h4 {
+    font-size: .9em;
+    color: var(--brand-green);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+button {
+    width: 280px;
+    border: none;
+    padding: 1em;
+    color: #fff;
+    font-size: 1em;
+    margin: 1em 0 4em;
+    border-radius: 2em;
+    text-transform: uppercase;
+    justify-content: space-evenly !important;
+    background-color: var(--brand-green);
+}
+
+div#numeros {
+    width: 90%;
+    padding: 1em;
+    margin: -1.1em;
+    border-radius: .5em;
+    background-color: var(--brand-beige);
+}
+
+div#numeros h3 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+div#numeros p {
+    color: var(--brand-green);
+
+}
+
+section#servicos {
+    height: auto;
+    background-color: var(--brand-green-light-02);
+}
+
+section#servicos h4 {
+    padding-top: 300px;
+}
