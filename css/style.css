@@ -36,15 +36,19 @@ body {
 .display_flex {
     display: flex;
 }
-.scroll{
+
+.scroll {
     background-color: var(--brand-green);
 }
-.scroll a, .scroll a > span{
+
+.scroll a, .scroll a>span {
     color: #fff;
 }
-.scroll a> ion-icon{
+
+.scroll ion-icon#menu {
     color: #fff;
 }
+
 /*===================HEADER===================*/
 header {
     top: 0;
@@ -58,6 +62,7 @@ header {
 header nav {
     width: 100%;
     padding: .5em 1em;
+    transition: all 500ms;
     justify-content: space-between;
 }
 
@@ -72,9 +77,14 @@ header a span {
     color: var(--brand-green);
 }
 
-header nav a[id=menu] {
-    font-size: 2em;
+ion-icon#menu {
+    font-size: 1.3em;
+    transition: all 500ms;
     color: var(--brand-green);
+}
+
+ion-icon#menu:hover {
+    transform: scale(1.2);
 }
 
 /*===================SECTIONS===================*/
@@ -114,18 +124,27 @@ p {
     color: var(--gray-paragraph);
 }
 
-button {
+button#agendamento {
     width: 280px;
     border: none;
     padding: 1em;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
-    margin: 1em 0 3.5em;
     border-radius: 2em;
+    margin: 1em 0 3.5em;
+    transition: all 500ms;
     text-transform: uppercase;
     justify-content: space-evenly !important;
     background-color: var(--brand-green);
+}
+
+button#agendamento ion-icon {
+    font-size: 1.2em;
+}
+
+button#agendamento:hover {
+    transform: scale(1.1);
 }
 
 div#estatisticas {
@@ -158,13 +177,14 @@ section#servicos h4 {
 }
 
 /*SCROLL BAR*/
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     width: 20px;
     border-radius: 1em;
     border: 9px solid #fff;
     background-color: var(--gray-paragraph);
 }
-html::-webkit-scrollbar-thumb{
+
+html::-webkit-scrollbar-thumb {
     border-radius: 1em;
     border: 4px solid #fff;
     background-color: var(--brand-green);
