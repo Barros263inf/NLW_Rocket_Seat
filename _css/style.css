@@ -18,58 +18,78 @@
     --gray-headline: #212529;
     --gray-paragraph: #495057;
     /*Fonts*/
-    --font-default: 'DM Sans', sans-serif;;
-}
-
-.display_flex {
-    display: flex;
+    --font-default: 'DM Sans', sans-serif;
+    /*Viewport Dimensions*/
+    --header-height: 3.6em;
+    --section-height: 1150px;
+    --viewport-width: 370px;
 }
 
 body {
-    width: 320px;
     margin: .1em auto;
     position: relative;
+    width: var(--viewport-width);
     font-family: var(--font-default);
 }
 
+/*===================CLASS===================*/
+.display_flex {
+    display: flex;
+}
+.scroll{
+    background-color: var(--brand-green);
+}
+.scroll a, .scroll a > span{
+    color: #fff;
+}
+.scroll a> ion-icon{
+    color: #fff;
+}
+/*===================HEADER===================*/
 header {
-    /*
     top: 0;
-    position: sticky;*/
+    z-index: 1;
+    position: fixed;
+    width: var(--viewport-width);
+    height: var(--header-height);
     background-color: var(--brand-green-light);
 }
 
-nav {
+header nav {
     width: 100%;
     padding: .5em 1em;
     justify-content: space-between;
 }
 
-nav a {
+header nav a {
     color: #000;
     font-size: 1.5em;
     text-decoration: none;
 }
 
-nav a[href=menu] {
+header a span {
+    font-weight: 900;
+    color: var(--brand-green);
+}
+
+header nav a[id=menu] {
     font-size: 2em;
     color: var(--brand-green);
 }
 
-a span {
-    color: var(--brand-green);
-}
-
+/*===================SECTIONS===================*/
 section {
-    padding: .5em;
-    height: 1080px;
+    padding: 2em 1em;
     text-align: center;
     align-items: center;
     flex-direction: column;
+    height: var(--section-height);
 }
 
 section#introducao {
+    padding-top: calc(var(--header-height)*2);
     background-color: var(--brand-green-light);
+    height: calc(var(--section-height) + var(--header-height));
 }
 
 h4 {
@@ -79,11 +99,13 @@ h4 {
 
 h1 {
     font-size: 2em;
+    padding: 0 .5em 0;
     color: var(--gray-headline);
 }
 
 h2 {
     font-size: 1.8em;
+    padding: 0 .5em 0;
 }
 
 p {
@@ -98,29 +120,30 @@ button {
     padding: 1em;
     color: #fff;
     font-size: 1em;
-    margin: 1em 0 4em;
+    cursor: pointer;
+    margin: 1em 0 3.5em;
     border-radius: 2em;
     text-transform: uppercase;
     justify-content: space-evenly !important;
     background-color: var(--brand-green);
 }
 
-div#numeros {
+div#estatisticas {
     width: 90%;
     padding: 1em;
-    margin: -1.1em;
+    margin: -1.2em;
     border-radius: .5em;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.155);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.155);
     background-color: var(--brand-beige);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.155);
 }
 
-div#numeros h3 {
+div#estatisticas h3 {
     font-size: 3em;
     margin-bottom: 0;
 }
 
-div#numeros p {
+div#estatisticas p {
+    margin-top: 0;
     color: var(--brand-green);
 
 }
@@ -132,4 +155,17 @@ section#servicos {
 
 section#servicos h4 {
     padding-top: 300px;
+}
+
+/*SCROLL BAR*/
+html::-webkit-scrollbar{
+    width: 20px;
+    border-radius: 1em;
+    border: 9px solid #fff;
+    background-color: var(--gray-paragraph);
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 1em;
+    border: 4px solid #fff;
+    background-color: var(--brand-green);
 }
