@@ -5,6 +5,7 @@
 * {
     padding: 0;
     box-sizing: border-box;
+
 }
 
 :root {
@@ -26,13 +27,16 @@
 }
 
 body {
+    overflow: overlay;
     margin: .1em auto;
     position: relative;
+    overflow-x: hidden;
     width: var(--viewport-width);
     font-family: var(--font-default);
 }
 
 /*===================CLASS===================*/
+
 .display_flex {
     display: flex;
 }
@@ -41,11 +45,7 @@ body {
     background-color: var(--brand-green);
 }
 
-.scroll a, .scroll a>span {
-    color: #fff;
-}
-
-.scroll ion-icon#menu {
+.scroll a, .scroll a>span, .scroll ion-icon.menu_icon {
     color: #fff;
 }
 
@@ -59,9 +59,9 @@ header {
     background-color: var(--brand-green-light);
 }
 
-header nav {
+nav#menu_barra {
     width: 100%;
-    padding: .5em 1em;
+    padding: .7em 1em;
     transition: all 500ms;
     justify-content: space-between;
 }
@@ -69,21 +69,98 @@ header nav {
 header nav a {
     color: #000;
     font-size: 1.5em;
+    align-self: center;
     text-decoration: none;
 }
 
-header a span {
+header a>span {
     font-weight: 900;
     color: var(--brand-green);
 }
 
-ion-icon#menu {
-    font-size: 1.3em;
+ion-icon.menu_icon {
+    font-size: 2em;
     transition: all 500ms;
     color: var(--brand-green);
 }
 
-ion-icon#menu:hover {
+ion-icon.menu_icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/*=================MENU EXPENDED=================*/
+div.menu_off{
+    display: none;
+}
+div.menu_on {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--brand-green);
+}
+
+div.menu_on header {
+    padding: 1em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--brand-green);
+}
+
+div.menu_on a{
+    color: #fff;
+}
+
+div.menu_on ion-icon.menu_icon{
+    color: #fff;
+}
+
+div.menu_on ul.tópicos {
+    margin: 6em 0 1em;
+    width: 100%;
+    color: #fff;
+    display: block;
+    list-style: none;
+    text-align: center;
+    font-weight: bolder;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.menu_on ul.tópicos>li {
+    margin: 1.5em 0;
+    padding: .5em 0;
+}
+
+div.menu_on ul.tópicos>li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+div.menu_on button.agendamento {
+    background-color: #fff;
+    color: var(--brand-green);
+}
+
+div.menu_on ul.social_links {
+    gap: 2em;
+    color: #fff;
+    font-size: 1.8em;
+    list-style: none;
+}
+div.menu_on ul.social_links li{
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+div.menu_on ul.social_links li:hover {
     transform: scale(1.2);
 }
 
@@ -124,7 +201,7 @@ p {
     color: var(--gray-paragraph);
 }
 
-button#agendamento {
+button.agendamento {
     width: 280px;
     border: none;
     padding: 1em;
@@ -139,11 +216,11 @@ button#agendamento {
     background-color: var(--brand-green);
 }
 
-button#agendamento ion-icon {
+button.agendamento ion-icon {
     font-size: 1.2em;
 }
 
-button#agendamento:hover {
+button.agendamento:hover {
     transform: scale(1.1);
 }
 
@@ -173,13 +250,13 @@ section#servicos {
 }
 
 section#servicos h4 {
-    padding-top: 300px;
+    padding-top: 32em;
 }
 
 /*SCROLL BAR*/
 html::-webkit-scrollbar {
     width: 20px;
-    border-radius: 1em;
+
     border: 9px solid #fff;
     background-color: var(--gray-paragraph);
 }
