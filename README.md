@@ -1,9 +1,10 @@
 # 🚀NLW_Rocket_Seat 8ª Edição🚀
 ### Projeto desenvolvido no evento NLW RocketSeat.
-A proposta deste projeto é desenvolver uma aplicação,<br>
-que traga novos desáfios, implementando <br>
-funcionalidades básicas e buscando adiquirir <br>
-experiência no desenvolvimento web.
+A proposta deste projeto é desenvolver <br>
+uma aplicação, que traga novos desáfios, <br>
+implementando funcionalidades básicas e <br>
+buscando adiquirir experiência no <br>
+desenvolvimento web. <br>
 
 <br>
 
