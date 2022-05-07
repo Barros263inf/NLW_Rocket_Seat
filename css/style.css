@@ -27,10 +27,9 @@
 }
 
 body {
-    overflow: overlay;
+    overflow-y: overlay;
     margin: .1em auto;
     position: relative;
-    overflow-x: hidden;
     width: var(--viewport-width);
     font-family: var(--font-default);
 }
@@ -90,9 +89,10 @@ ion-icon.menu_icon:hover {
 }
 
 /*=================MENU EXPENDED=================*/
-div.menu_off{
+div.menu_off {
     display: none;
 }
+
 div.menu_on {
     top: 0;
     left: 0;
@@ -114,11 +114,11 @@ div.menu_on header {
     background-color: var(--brand-green);
 }
 
-div.menu_on a{
+div.menu_on a {
     color: #fff;
 }
 
-div.menu_on ion-icon.menu_icon{
+div.menu_on ion-icon.menu_icon {
     color: #fff;
 }
 
@@ -139,7 +139,7 @@ div.menu_on ul.tópicos>li {
     padding: .5em 0;
 }
 
-div.menu_on ul.tópicos>li:hover{
+div.menu_on ul.tópicos>li:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -155,7 +155,8 @@ div.menu_on ul.social_links {
     font-size: 1.8em;
     list-style: none;
 }
-div.menu_on ul.social_links li{
+
+div.menu_on ul.social_links li {
     cursor: pointer;
     transition: all 500ms;
 }
@@ -265,4 +266,22 @@ html::-webkit-scrollbar-thumb {
     border-radius: 1em;
     border: 4px solid #fff;
     background-color: var(--brand-green);
+}
+
+@media (max-width: 400px) {
+    :root {
+        --viewport-width: 100%;
+    }
+    html::-webkit-scrollbar{
+        width: 0;
+    }
+}
+@media (max-width: 1200px) {
+    :root {
+        --viewport-width: 100%;
+    }
+    body{
+        min-width: 280px;
+        overflow-y: scroll;
+    }
 }
