@@ -17,6 +17,10 @@ body {
     font-family: var(--font-default);
 }
 
+main{
+    width: var(--viewport-width);
+
+}
 :root {
     /*Primary Colors*/
     --brand-green: #00856F;
@@ -32,7 +36,7 @@ body {
     /*Viewport Dimensions*/
     --header-height: 3.4em;
     --section-height: 1150px;
-    --viewport-width: 370px;
+    --viewport-width: 330px;
 }
 
 /*====================CLASS====================*/
@@ -192,6 +196,7 @@ h2 {
 p {
     font-size: 1em;
     max-width: 350px;
+    min-width: 100%;
     font-weight: 100;
     color: var(--gray-paragraph);
 }
@@ -236,7 +241,7 @@ button.scheduling:hover {
 }
 
 div#estatisticas {
-    width: 90%;
+    width: 330px;
     padding: 1em;
     margin: -1.2em;
     border-radius: .5em;
@@ -272,7 +277,7 @@ div#cards_colection {
 }
 
 div#cards_colection ul li {
-    width: 100%;
+    width: 330px;
     padding: 1.5em;
     margin: 3em auto;
     list-style: none;
@@ -301,7 +306,20 @@ div#cards_colection p {
     width: 100%;
     text-align: left;
 }
-
+/*===============SECTION ABOUT===================*/
+section#about{
+    text-align: left;
+    background-color: var(--brand-beige);
+}
+section#about h4{
+    width: 100%;
+    text-align: left;
+}
+section#about img{
+    width: 100%;
+    max-width: 350px;
+    margin: 2em auto;
+}
 
 /*================SCROLL BAR=====================*/
 html::-webkit-scrollbar {

@@ -13,52 +13,51 @@
 </head>
 
 <body onscroll="header_background()">
+    <header>
+        <nav id="menu_bar" class="display_flex ">
+
+            <a href="#" target="_self">Doctor<span>Care</span></a>
+            <ion-icon class="menu_icon" name="menu-outline" onclick="menu_show()"></ion-icon>
+
+            <!--MENU EXPANDIDO-->
+            <div id="menu_exp" class="menu_off">
+                <header class="display_flex">
+                    <a href="#" target="_self">Doctor<b>Care</b></a>
+                    <ion-icon class="menu_icon" name="close-outline" onclick="menu_show()"></ion-icon>
+                </header>
+
+                <ul class="links">
+                    <li>Serviços</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                </ul>
+
+                <button class="scheduling">
+                    agende sua consulta
+                </button>
+
+                <ul class="social_links display_flex">
+                    <li>
+                        <a href="#" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--==============-->
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav id="menu_bar" class="display_flex ">
-
-                <a href="#" target="_self">Doctor<span>Care</span></a>
-                <ion-icon class="menu_icon" name="menu-outline" onclick="menu_show()"></ion-icon>
-
-                <!--MENU EXPANDIDO-->
-                <div id="menu_exp" class="menu_off">
-                    <header class="display_flex">
-                        <a href="#" target="_self">Doctor<b>Care</b></a>
-                        <ion-icon class="menu_icon" name="close-outline" onclick="menu_show()"></ion-icon>
-                    </header>
-
-                    <ul class="links">
-                        <li>Serviços</li>
-                        <li>Sobre</li>
-                        <li>Contato</li>
-                    </ul>
-
-                    <button class="scheduling">
-                        agende sua consulta
-                    </button>
-
-                    <ul class="social_links display_flex">
-                        <li>
-                            <a href="#" target="_blank">
-                                <ion-icon name="logo-instagram"></ion-icon>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <ion-icon name="logo-youtube"></ion-icon>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--==============-->
-            </nav>
-        </header>
-
         <section id="introduction" class="display_flex">
             <h4>BOAS-VINDAS A DOCTORCARE 👋</h4>
             <h1>Assistência médica simplificada para todos</h1>
@@ -70,7 +69,7 @@
                 <ion-icon name="logo-whatsapp"></ion-icon>
                 agende sua consulta
             </button>
-            <img src="assets/Foto.png" alt="mulher sorrindo">
+            <img src="assets/mulher_sorrindo.png" alt="mulher sorrindo">
             <div id="estatisticas">
                 <h3>+3.500</h3>
                 <p>Pacientes atendidos</p>
@@ -143,7 +142,12 @@
         </section>
 
         <section id="about" class="display_flex">
-            
+            <h4>SOBRE NÓS</h4>
+            <h2>Entenda quem somos e por que existimos</h2>
+            <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            </p>
+            <img src="assets/doutor_sorrindo_500px.png" alt="doutor sorrindo">
         </section>
     </main>
 </body>
