@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu_expandido.css">
-
     <script src="script/menu_on.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
@@ -19,36 +17,41 @@
         <header>
             <nav id="menu_barra" class="display_flex ">
 
-                    <a href="#">Doctor<span>Care</span></a>
-                    <ion-icon class="menu_icon" name="menu-outline" onclick="menu_show()"></ion-icon>
-                    
+                <a href="#">Doctor<span>Care</span></a>
+                <ion-icon class="menu_icon" name="menu-outline" onclick="menu_show()"></ion-icon>
+
                 <!--MENU EXPANDIDO-->
                 <div id="menu_exp" class="menu_off">
                     <header class="display_flex">
                         <a href="#">Doctor<b>Care</b></a>
                         <ion-icon class="menu_icon" name="close-outline" onclick="menu_show()"></ion-icon>
                     </header>
-               
+
                     <ul class="tópicos">
                         <li>Serviços</li>
                         <li>Sobre</li>
                         <li>Contato</li>
                     </ul>
 
-                    <button class="agendamento display_flex">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    <button class="agendamento">
                         agende sua consulta
                     </button>
 
                     <ul class="social_links display_flex">
                         <li>
-                            <ion-icon name="logo-instagram"></ion-icon>
+                            <a href="">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
                         </li>
                         <li>
-                            <ion-icon name="logo-facebook"></ion-icon>
+                            <a href="">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
                         </li>
                         <li>
-                            <ion-icon name="logo-youtube"></ion-icon>
+                            <a href="">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
                         </li>
                     </ul>
                 </div>
