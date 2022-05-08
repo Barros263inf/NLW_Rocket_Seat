@@ -12,44 +12,44 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
 </head>
 
-<body onscroll="menu_on()">
+<body onscroll="header_background()">
     <main>
         <header>
-            <nav id="menu_barra" class="display_flex ">
+            <nav id="menu_bar" class="display_flex ">
 
-                <a href="#">Doctor<span>Care</span></a>
+                <a href="#" target="_self">Doctor<span>Care</span></a>
                 <ion-icon class="menu_icon" name="menu-outline" onclick="menu_show()"></ion-icon>
 
                 <!--MENU EXPANDIDO-->
                 <div id="menu_exp" class="menu_off">
                     <header class="display_flex">
-                        <a href="#">Doctor<b>Care</b></a>
+                        <a href="#" target="_self">Doctor<b>Care</b></a>
                         <ion-icon class="menu_icon" name="close-outline" onclick="menu_show()"></ion-icon>
                     </header>
 
-                    <ul class="tópicos">
+                    <ul class="links">
                         <li>Serviços</li>
                         <li>Sobre</li>
                         <li>Contato</li>
                     </ul>
 
-                    <button class="agendamento">
+                    <button class="scheduling">
                         agende sua consulta
                     </button>
 
                     <ul class="social_links display_flex">
                         <li>
-                            <a href="">
+                            <a href="#" target="_blank">
                                 <ion-icon name="logo-instagram"></ion-icon>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="#" target="_blank">
                                 <ion-icon name="logo-facebook"></ion-icon>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="#" target="_blank">
                                 <ion-icon name="logo-youtube"></ion-icon>
                             </a>
                         </li>
@@ -59,14 +59,14 @@
             </nav>
         </header>
 
-        <section id="introducao" class="display_flex">
+        <section id="introduction" class="display_flex">
             <h4>BOAS-VINDAS A DOCTORCARE 👋</h4>
             <h1>Assistência médica simplificada para todos</h1>
             <p>
                 Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma
                 cura a longo prazo.
             </p>
-            <button class="agendamento display_flex">
+            <button class="scheduling display_flex">
                 <ion-icon name="logo-whatsapp"></ion-icon>
                 agende sua consulta
             </button>
@@ -80,9 +80,70 @@
                 <p>Anos no mercado</p>
             </div>
         </section>
-        <section id="servicos" class="display_flex">
+
+        <section id="services" class="display_flex">
             <h4>SERVIÇOS</h4>
-            <h2>Como podemos ajudá-lo em se sentir melhor?</h2>
+            <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
+            <div id="cards_colection">
+                <ul class="cards">
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h3>Problemas digestivos</h3>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h3>Saúde hormonal</h3>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h3>Bem-estar mental</h3>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h3>Cuidados pediátricos</h3>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h3>Autoimune e inflamação</h3>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h3>Saúde do coração</h3>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="about" class="display_flex">
+            
         </section>
     </main>
 </body>

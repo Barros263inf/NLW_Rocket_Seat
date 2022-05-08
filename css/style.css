@@ -2,10 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
+/*==============DEFAULT AND ROOT==============*/
 * {
     padding: 0;
     box-sizing: border-box;
 
+}
+
+body {
+    overflow-y: overlay;
+    margin: .1em auto;
+    position: relative;
+    width: var(--viewport-width);
+    font-family: var(--font-default);
 }
 
 :root {
@@ -26,15 +35,7 @@
     --viewport-width: 370px;
 }
 
-body {
-    overflow-y: overlay;
-    margin: .1em auto;
-    position: relative;
-    width: var(--viewport-width);
-    font-family: var(--font-default);
-}
-
-/*===================CLASS===================*/
+/*====================CLASS====================*/
 
 .display_flex {
     display: flex;
@@ -58,7 +59,7 @@ header {
     background-color: var(--brand-green-light);
 }
 
-nav#menu_barra {
+nav#menu_bar {
     width: 100%;
     padding: .7em 1em;
     transition: all 500ms;
@@ -122,7 +123,7 @@ div.menu_on ion-icon.menu_icon {
     color: #fff;
 }
 
-div.menu_on ul.tópicos {
+div.menu_on ul.links {
     width: 100%;
     color: #fff;
     display: block;
@@ -134,18 +135,18 @@ div.menu_on ul.tópicos {
     justify-content: space-around;
 }
 
-div.menu_on ul.tópicos>li {
+div.menu_on ul.links>li {
     margin: 1.5em 0;
     padding: .5em 0;
     font-size: 1.2em;
 }
 
-div.menu_on ul.tópicos>li:hover {
+div.menu_on ul.links>li:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-div.menu_on button.agendamento {
+div.menu_on button.scheduling {
     background-color: #fff;
     color: var(--brand-green);
 }
@@ -166,20 +167,7 @@ div.menu_on ul.social_links li:hover {
     transform: scale(1.2);
 }
 
-/*===================SECTIONS===================*/
-section {
-    padding: 2em 1em;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    height: var(--section-height);
-}
-
-section#introducao {
-    padding-top: calc(var(--header-height)*2);
-    background-color: var(--brand-green-light);
-    height: calc(var(--section-height) + var(--header-height));
-}
+/*================SECTIONS COMMON=================*/
 
 h4 {
     font-size: .9em;
@@ -188,14 +176,16 @@ h4 {
 
 h1 {
     font-size: 2em;
-    max-width: 500px;
+    max-width: 398px;
+    min-width: 350px;
     padding: 0 .5em 0;
     color: var(--gray-headline);
 }
 
 h2 {
-    max-width: 500px;
     font-size: 1.8em;
+    max-width: 398px;
+    min-width: 350px;
     padding: 0 .5em 0;
 }
 
@@ -206,7 +196,22 @@ p {
     color: var(--gray-paragraph);
 }
 
-button.agendamento {
+section {
+    padding: 2em 2em;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: var(--section-height);
+}
+
+/*============SECTION INTRODUCTION==============*/
+section#introduction {
+    padding-top: calc(var(--header-height)*2);
+    background-color: var(--brand-green-light);
+    height: calc(var(--section-height) + var(--header-height));
+}
+
+button.scheduling {
     width: 280px;
     border: none;
     padding: 1em;
@@ -221,11 +226,11 @@ button.agendamento {
     background-color: var(--brand-green);
 }
 
-button.agendamento ion-icon {
+button.scheduling ion-icon {
     font-size: 1.2em;
 }
 
-button.agendamento:hover {
+button.scheduling:hover {
     transform: scale(1.1);
     background-color: var(--brand-green-hover);
 }
@@ -251,19 +256,56 @@ div#estatisticas p {
 
 }
 
-section#servicos {
+/*============SECTION SERVICES===================*/
+section#services {
     height: auto;
     background-color: var(--brand-green-light-02);
 }
 
-section#servicos h4 {
-    padding-top: 32em;
+section#services h4 {
+    padding-top: 22em;
 }
 
-/*===================SCROLL BAR===================*/
+div#cards_colection {
+    width: 100%;
+    margin: 1em auto;
+}
+
+div#cards_colection ul li {
+    width: 100%;
+    padding: 1.5em;
+    margin: 3em auto;
+    list-style: none;
+    border-radius: .5em;
+    background-color: #fff;
+    border: 2px solid var(--brand-green-light);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.098);
+    display: flex;
+    flex-direction: column;
+}
+
+div#cards_colection ion-icon {
+    font-size: 1.8em;
+    border-radius: 50%;
+    color: var(--brand-green);
+    background-color: var(--brand-green-light);
+}
+
+div#cards_colection h3 {
+    margin: .5em 0;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+div#cards_colection p {
+    width: 100%;
+    text-align: left;
+}
+
+
+/*================SCROLL BAR=====================*/
 html::-webkit-scrollbar {
     width: 20px;
-
     border: 9px solid #fff;
     background-color: var(--gray-paragraph);
 }
