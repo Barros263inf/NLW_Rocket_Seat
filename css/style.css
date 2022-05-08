@@ -123,11 +123,11 @@ div.menu_on ion-icon.menu_icon {
 }
 
 div.menu_on ul.tópicos {
-    margin: 6em 0 1em;
     width: 100%;
     color: #fff;
     display: block;
     list-style: none;
+    margin: 6em 0 1em;
     text-align: center;
     font-weight: bolder;
     flex-direction: column;
@@ -137,6 +137,7 @@ div.menu_on ul.tópicos {
 div.menu_on ul.tópicos>li {
     margin: 1.5em 0;
     padding: .5em 0;
+    font-size: 1.2em;
 }
 
 div.menu_on ul.tópicos>li:hover {
@@ -187,17 +188,20 @@ h4 {
 
 h1 {
     font-size: 2em;
+    max-width: 500px;
     padding: 0 .5em 0;
     color: var(--gray-headline);
 }
 
 h2 {
+    max-width: 500px;
     font-size: 1.8em;
     padding: 0 .5em 0;
 }
 
 p {
     font-size: 1em;
+    max-width: 350px;
     font-weight: 100;
     color: var(--gray-paragraph);
 }
@@ -223,6 +227,7 @@ button.agendamento ion-icon {
 
 button.agendamento:hover {
     transform: scale(1.1);
+    background-color: var(--brand-green-hover);
 }
 
 div#estatisticas {
@@ -240,6 +245,7 @@ div#estatisticas h3 {
 }
 
 div#estatisticas p {
+    max-width: 100%;
     margin-top: 0;
     color: var(--brand-green);
 
@@ -254,7 +260,7 @@ section#servicos h4 {
     padding-top: 32em;
 }
 
-/*SCROLL BAR*/
+/*===================SCROLL BAR===================*/
 html::-webkit-scrollbar {
     width: 20px;
 
@@ -268,19 +274,23 @@ html::-webkit-scrollbar-thumb {
     background-color: var(--brand-green);
 }
 
+/*===================RESPONSIVE===================*/
 @media (max-width: 400px) {
     :root {
         --viewport-width: 100%;
     }
-    html::-webkit-scrollbar{
+
+    html::-webkit-scrollbar {
         width: 0;
     }
 }
+
 @media (max-width: 1200px) {
     :root {
         --viewport-width: 100%;
     }
-    body{
+
+    body {
         min-width: 280px;
         overflow-y: scroll;
     }
