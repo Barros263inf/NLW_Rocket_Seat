@@ -2,25 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-/*==============DEFAULT AND ROOT==============*/
+/*==============GLOBAL AND ROOT==============*/
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-body {
-    overflow-y: overlay;
-    margin: .1em auto;
-    position: relative;
-    width: var(--viewport-width);
-    font-family: var(--font-default);
-}
-
-main{
-    width: var(--viewport-width);
-
-}
 :root {
     /*Primary Colors*/
     --brand-green: #00856F;
@@ -34,9 +22,36 @@ main{
     /*Fonts*/
     --font-default: 'DM Sans', sans-serif;
     /*Viewport Dimensions*/
-    --header-height: 3.4em;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+    --header-height: 7.2rem;
+    --viewport-width: 385px;
     --section-height: 1150px;
-    --viewport-width: 330px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: .1em auto;
+    position: relative;
+    overflow-y: overlay;
+    width: var(--viewport-width);
+    font-family: var(--font-default);
+    background-color: #495057;
+}
+
+main {
+    position: relative;
+    width: var(--viewport-width);
+}
+
+section, footer {
+    z-index: 0;
+    padding: 2.4rem;
 }
 
 /*====================CLASS====================*/
@@ -45,16 +60,8 @@ main{
     display: flex;
 }
 
-.scroll {
-    background-color: var(--brand-green);
-}
-
-.scroll a, .scroll a>span, .scroll ion-icon.menu_icon {
-    color: #fff;
-}
-
-/*===================HEADER===================*/
-header {
+/*=================HEADER MENU=================*/
+header#navigation {
     top: 0;
     z-index: 1;
     position: fixed;
@@ -65,25 +72,28 @@ header {
 
 nav#menu_bar {
     width: 100%;
-    padding: .7em 1em;
+    height: 100%;
+    padding: 0 2.4rem;
     transition: all 500ms;
     justify-content: space-between;
 }
 
-header nav a {
+nav a.logo {
     color: #000;
-    font-size: 1.5em;
+    font-size: 2rem;
     align-self: center;
     text-decoration: none;
 }
 
-header a>span {
-    font-weight: 900;
+nav a.logo span {
+    font-size: 2.4rem;
+    font-weight: bolder;
     color: var(--brand-green);
 }
 
-ion-icon.menu_icon {
-    font-size: 2em;
+nav ion-icon.menu_icon {
+    height: 100%;
+    font-size: 2.4rem;
     transition: all 500ms;
     color: var(--brand-green);
 }
@@ -91,6 +101,16 @@ ion-icon.menu_icon {
 ion-icon.menu_icon:hover {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+nav.scroll {
+    background-color: var(--brand-green);
+}
+
+nav.scroll a.logo,
+nav.scroll a.logo span,
+nav.scroll ion-icon.menu_icon {
+    color: #fff;
 }
 
 /*=================MENU EXPENDED=================*/
@@ -103,8 +123,6 @@ div.menu_on {
     left: 0;
     z-index: 1;
     width: 100%;
-    padding: 1em;
-    display: flex;
     height: 100vh;
     position: absolute;
     align-items: center;
@@ -112,53 +130,63 @@ div.menu_on {
     background-color: var(--brand-green);
 }
 
-div.menu_on header {
-    padding: 1em;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--brand-green);
-}
-
-div.menu_on a {
-    color: #fff;
-}
-
-div.menu_on ion-icon.menu_icon {
-    color: #fff;
-}
-
-div.menu_on ul.links {
+div#menu_exp header {
     width: 100%;
+    padding: 0 2.4rem;
+    height: var(--header-height);
+    justify-content: space-between;
+
+}
+
+div#menu_exp a {
     color: #fff;
-    display: block;
+    text-decoration: none;
+}
+
+div#menu_exp > header a {
+    color: white;
+    text-decoration: none;
+}
+
+div#menu_exp > header a span {
+    color: white;
+    text-decoration: none;
+}
+
+div#menu_exp > header ion-icon {
+    color: white;
+}
+
+div#menu_exp ul.links {
+    width: 100%;
+    font-size: 2rem;
+    margin: 6rem 0 0;
     list-style: none;
-    margin: 6em 0 1em;
     text-align: center;
     font-weight: bolder;
     flex-direction: column;
-    justify-content: space-around;
 }
 
-div.menu_on ul.links>li {
-    margin: 1.5em 0;
-    padding: .5em 0;
-    font-size: 1.2em;
+div#menu_exp ul.links li {
+    margin-bottom: 4.8rem;
 }
 
-div.menu_on ul.links>li:hover {
-    cursor: pointer;
-    text-decoration: underline;
+div#menu_exp ul.links li a {
+    padding: 1rem;
 }
 
-div.menu_on button.scheduling {
+div#menu_exp button.scheduling {
+    height: 5.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 8rem;
     background-color: #fff;
     color: var(--brand-green);
 }
 
 div.menu_on ul.social_links {
-    gap: 2em;
+    gap: 4.2rem;
     color: #fff;
-    font-size: 1.8em;
+    font-size: 3.4em;
     list-style: none;
 }
 
@@ -172,67 +200,61 @@ div.menu_on ul.social_links li:hover {
 }
 
 /*================SECTIONS COMMON=================*/
-
-h4 {
-    font-size: .9em;
-    color: var(--brand-green);
+section {
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(var(--section-height) + var(--header-height));
 }
 
 h1 {
-    font-size: 2em;
-    max-width: 398px;
-    min-width: 350px;
-    padding: 0 .5em 0;
+    font-size: 3.4rem;
+    min-width: 300px;
+    max-width: 500px;
     color: var(--gray-headline);
 }
 
 h2 {
-    font-size: 1.8em;
-    max-width: 398px;
-    min-width: 350px;
-    padding: 0 .5em 0;
+    font-size: 3rem;
+    min-width: 300px;
+    max-width: 500px;
+    color: var(--gray-headline);
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+    color: var(--brand-green);
 }
 
 p {
-    font-size: 1em;
-    max-width: 350px;
-    min-width: 100%;
-    font-weight: 100;
+    font-size: 1.8rem;
+    max-width: 500px;
+    line-height: 2.7rem;
+    margin: 2.4rem 0 3.2rem;
     color: var(--gray-paragraph);
 }
 
-section {
-    padding: 2em 2em;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    height: var(--section-height);
-}
-
-/*============SECTION INTRODUCTION==============*/
-section#introduction {
-    padding-top: calc(var(--header-height)*2);
-    background-color: var(--brand-green-light);
-    height: calc(var(--section-height) + var(--header-height));
-}
-
 button.scheduling {
-    width: 280px;
+    gap: 1.6rem;
     border: none;
-    padding: 1em;
     color: #fff;
-    font-size: 1em;
+    height: 5.5rem;
     cursor: pointer;
-    border-radius: 2em;
-    margin: 1em 0 3.5em;
+    font-size: 1.4rem;
+    margin-bottom: 6rem;
+    padding: 1.6rem 3em;
+    border-radius: 8rem;
+    align-items: center;
     transition: all 500ms;
+    justify-content: center;
     text-transform: uppercase;
-    justify-content: space-evenly !important;
     background-color: var(--brand-green);
 }
 
 button.scheduling ion-icon {
-    font-size: 1.2em;
+    font-size: 2rem;
 }
 
 button.scheduling:hover {
@@ -240,23 +262,34 @@ button.scheduling:hover {
     background-color: var(--brand-green-hover);
 }
 
-div#estatisticas {
-    width: 330px;
-    padding: 1em;
-    margin: -1.2em;
-    border-radius: .5em;
+/*============SECTION HOME==============*/
+section#home {
+    padding-top: var(--header-height);
+    background-color: var(--brand-green-light);
+}
+
+section#home h4{
+    padding-top: 4rem;
+}
+
+div#statistics {
+    width: 100%;
+    height: 47rem;
+    padding: 4rem 0;
+    margin-top: -1.9rem;
+    border-radius: .6rem;
+    flex-direction: column;
     background-color: var(--brand-beige);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.155);
 }
 
-div#estatisticas h3 {
-    font-size: 3em;
-    margin-bottom: 0;
+div#statistics h3 {
+    margin: 0;
+    font-size: 4.8rem;
 }
 
-div#estatisticas p {
-    max-width: 100%;
-    margin-top: 0;
+div#statistics p {
+    font-size: 1.6rem;
     color: var(--brand-green);
 
 }
@@ -268,57 +301,140 @@ section#services {
 }
 
 section#services h4 {
-    padding-top: 22em;
+    margin-top: 20rem;    
+}
+
+section#services h2{
+    margin-bottom: 6rem;
 }
 
 div#cards_colection {
     width: 100%;
-    margin: 1em auto;
+    margin: auto;
 }
 
 div#cards_colection ul li {
-    width: 330px;
-    padding: 1.5em;
-    margin: 3em auto;
+    width: 100%;
+    display: flex;
+    padding: 2.4rem;
     list-style: none;
+    max-width: 500px;
+    margin: 0 0 3.2rem;
     border-radius: .5em;
+    flex-direction: column;
     background-color: #fff;
     border: 2px solid var(--brand-green-light);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.098);
-    display: flex;
-    flex-direction: column;
 }
 
 div#cards_colection ion-icon {
-    font-size: 1.8em;
+    font-size: 2.4rem;
     border-radius: 50%;
     color: var(--brand-green);
-    background-color: var(--brand-green-light);
+    background-color: var(--brand-green-light-02);
 }
 
 div#cards_colection h3 {
     margin: .5em 0;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 2.4rem;
 }
 
 div#cards_colection p {
     width: 100%;
     text-align: left;
+    font-size: 1.6rem;
 }
+
 /*===============SECTION ABOUT===================*/
-section#about{
+section#about {
+    height: auto;
     text-align: left;
+    padding-top: 10rem;
     background-color: var(--brand-beige);
 }
-section#about h4{
-    width: 100%;
-    text-align: left;
+
+section#about p{
+    margin-bottom: 6rem;
 }
-section#about img{
+
+section#about img {
     width: 100%;
-    max-width: 350px;
-    margin: 2em auto;
+    max-width: 500px;
+    margin: 0 auto 10rem;
+}
+
+/*===============SECTION CONTACT===================*/
+section#contact{
+    height: auto;
+    text-align: left;
+    background-color: #fff;
+}
+section#contact h2{
+    width: 29.7rem;
+    font-size: 3rem;
+    margin: 10rem 0 3.2rem;
+}
+
+section#contact address{
+    margin: 3.2rem 0;
+    line-height: 2.4rem;
+}
+
+section#contact address > div{
+    display: flex;
+    align-items: center;
+}
+
+section#contact a{
+    margin: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--gray-paragraph);
+}
+section#contact div > ion-icon{
+    font-size: 2.4rem;
+    vertical-align: middle;
+    color: var(--brand-green);
+}
+
+
+section#contact img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 0 10rem;
+}
+
+/*====================FOOTER=====================*/
+#footer {
+    height: auto;
+    color: #fff;
+    background-color: var(--brand-green-hover);
+}
+
+#footer a, #footer p {
+    color: #fff;
+}
+
+/*===================ARROW TOP===================*/
+ion-icon#arrow_top {
+    right: 1.5rem;
+    color: #fff;
+    padding: .7rem;
+    bottom: 2.5rem;
+    position: absolute;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    transition: all 500ms;
+    animation: arrow_on 500ms;
+    background-color: var(--brand-green-hover);
+}
+
+@keyframes arrow_on {
+    0% {
+        transform: translateY(50px);
+    }
 }
 
 /*================SCROLL BAR=====================*/
@@ -335,23 +451,32 @@ html::-webkit-scrollbar-thumb {
 }
 
 /*===================RESPONSIVE===================*/
-@media (max-width: 400px) {
-    :root {
-        --viewport-width: 100%;
-    }
-
-    html::-webkit-scrollbar {
-        width: 0;
-    }
-}
-
+/*
 @media (max-width: 1200px) {
     :root {
         --viewport-width: 100%;
     }
 
+    div#statistics {
+        flex-direction: row;
+    }
+
     body {
         min-width: 280px;
         overflow-y: scroll;
+    }
+}*/
+
+@media (max-width: 400px) {
+    :root {
+        --viewport-width: 100%;
+    }
+
+    div#statistics {
+        flex-direction: column;
+    }
+
+    html::-webkit-scrollbar {
+        width: 0;
     }
 }

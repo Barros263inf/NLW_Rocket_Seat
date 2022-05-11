@@ -1,18 +1,17 @@
 
-function header_background() {
-    if (scrollY > 0) {
-        menu_bar.classList.add("scroll");
+function menu(value) {
+    if(value == "on"){
+        menu_exp.classList.remove("menu_off");
+        menu_exp.classList.add("menu_on")
     }
-    else {
-        menu_bar.classList.remove("scroll");
-    }
-}
+    else if(value == "off"){
+        menu_exp.classList.remove("menu_on");
+        menu_exp.classList.add("menu_off")
 
-function menu_show() {
-    /*
-    3ª Solution
-    */
-    menu_exp.classList.toggle("menu_on")
+    }
+
+    /*3ª Solution
+    menu_exp.classList.add("menu_on")
     /*
     2ª Solution
     const menu = document.getElementById("menu_exp");
@@ -20,14 +19,38 @@ function menu_show() {
     )*/
     /*
     1ª Solution
-    if(menu.classList.contains("menu_off")){
-        alert(true)
-        menu.classList.remove("menu_off");
-        menu.classList.add("menu_on");
+    if (menu_exp.classList.contains("menu_off")) {
+
+        menu_exp.classList.remove("menu_off");
+        menu_exp.classList.add("menu_on");
     }
-    else{
-        alert(false)
-        menu.classList.remove("menu_on");
-        menu.classList.add("menu_off");
+    else {
+
+        menu_exp.classList.remove("menu_on");
+        menu_exp.classList.add("menu_off");
     }*/
 }
+
+window.addEventListener("scroll", () => {
+    if (scrollY > 0) {
+        menu_bar.classList.add("scroll");
+    }
+    else{
+        menu_bar.classList.remove("scroll");
+    }
+})
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset < 1080) {
+        arrow_top.style.display = "none"
+    } else {
+        arrow_top.style.display = "block"
+    }
+})
+
+arrow_top.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
