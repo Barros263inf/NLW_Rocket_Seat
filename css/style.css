@@ -143,17 +143,17 @@ div#menu_exp a {
     text-decoration: none;
 }
 
-div#menu_exp > header a {
+div#menu_exp>header a {
     color: white;
     text-decoration: none;
 }
 
-div#menu_exp > header a span {
+div#menu_exp>header a span {
     color: white;
     text-decoration: none;
 }
 
-div#menu_exp > header ion-icon {
+div#menu_exp>header ion-icon {
     color: white;
 }
 
@@ -268,7 +268,7 @@ section#home {
     background-color: var(--brand-green-light);
 }
 
-section#home h4{
+section#home h4 {
     padding-top: 4rem;
 }
 
@@ -276,6 +276,7 @@ div#statistics {
     width: 100%;
     height: 47rem;
     padding: 4rem 0;
+    align-items: center;
     margin-top: -1.9rem;
     border-radius: .6rem;
     flex-direction: column;
@@ -301,16 +302,17 @@ section#services {
 }
 
 section#services h4 {
-    margin-top: 20rem;    
+    margin-top: 20rem;
 }
 
-section#services h2{
+section#services h2 {
     margin-bottom: 6rem;
 }
 
 div#cards_colection {
     width: 100%;
     margin: auto;
+    justify-content: center;
 }
 
 div#cards_colection ul li {
@@ -354,7 +356,7 @@ section#about {
     background-color: var(--brand-beige);
 }
 
-section#about p{
+section#about p {
     margin-bottom: 6rem;
 }
 
@@ -365,35 +367,37 @@ section#about img {
 }
 
 /*===============SECTION CONTACT===================*/
-section#contact{
+section#contact {
     height: auto;
     text-align: left;
     background-color: #fff;
 }
-section#contact h2{
+
+section#contact h2 {
     width: 29.7rem;
     font-size: 3rem;
     margin: 10rem 0 3.2rem;
 }
 
-section#contact address{
+section#contact address {
     margin: 3.2rem 0;
     line-height: 2.4rem;
 }
 
-section#contact address > div{
+section#contact address>div {
     display: flex;
     align-items: center;
 }
 
-section#contact a{
+section#contact a {
     margin: 1.6rem;
     font-size: 1.6rem;
     font-style: normal;
     text-decoration: none;
     color: var(--gray-paragraph);
 }
-section#contact div > ion-icon{
+
+section#contact div>ion-icon {
     font-size: 2.4rem;
     vertical-align: middle;
     color: var(--brand-green);
@@ -407,23 +411,43 @@ section#contact img {
 }
 
 /*====================FOOTER=====================*/
-#footer {
-    height: auto;
+footer#footer {
     color: #fff;
+    flex-direction: column;
     background-color: var(--brand-green-hover);
 }
 
-#footer a, #footer p {
+footer#footer h2 {
     color: #fff;
+    font-size: 4.5rem;
+    margin: 6rem 0 2.4rem;
+}
+
+footer#footer p {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+footer#footer>ul {
+    gap: 3.2rem;
+    list-style: none;
+    margin: 2rem 0 6rem;
+}
+
+footer#footer>ul li a {
+    color: #fff;
+    font-size: 2.4rem;
 }
 
 /*===================ARROW TOP===================*/
 ion-icon#arrow_top {
+    display: none;
     right: 1.5rem;
     color: #fff;
     padding: .7rem;
     bottom: 2.5rem;
-    position: absolute;
+    position: fixed;
     font-size: 2.5rem;
     border-radius: 50%;
     transition: all 500ms;
@@ -451,21 +475,17 @@ html::-webkit-scrollbar-thumb {
 }
 
 /*===================RESPONSIVE===================*/
-/*
+
 @media (max-width: 1200px) {
     :root {
         --viewport-width: 100%;
-    }
-
-    div#statistics {
-        flex-direction: row;
     }
 
     body {
         min-width: 280px;
         overflow-y: scroll;
     }
-}*/
+}
 
 @media (max-width: 400px) {
     :root {
