@@ -46,8 +46,6 @@ body {
 
 main {
     position: relative;
-    flex-direction: column;
-    justify-content: center;
     width: var(--viewport-width);
 }
 
