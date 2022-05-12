@@ -46,6 +46,8 @@ body {
 
 main {
     position: relative;
+    flex-direction: column;
+    justify-content: center;
     width: var(--viewport-width);
 }
 
@@ -234,6 +236,10 @@ p {
     line-height: 2.7rem;
     margin: 2.4rem 0 3.2rem;
     color: var(--gray-paragraph);
+}
+
+a{
+    text-decoration: none;
 }
 
 button.scheduling {
