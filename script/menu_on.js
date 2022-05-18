@@ -7,7 +7,6 @@ function menu(value) {
     else if(value == "off"){
         menu_exp.classList.remove("menu_on");
         menu_exp.classList.add("menu_off")
-
     }
 
     /*3ª Solution
@@ -31,6 +30,7 @@ function menu(value) {
     }*/
 }
 
+//Function Menu Bar Scroll
 window.addEventListener("scroll", () => {
     if (scrollY > 0) {
         menu_bar.classList.add("scroll");
@@ -40,14 +40,16 @@ window.addEventListener("scroll", () => {
     }
 })
 
+//Function Button Arrow Up Opacity
 window.addEventListener("scroll", () => {
     if (window.pageYOffset < 1080) {
-        arrow_top.style.display = "none"
+        arrow_top.style.display = "none";
     } else {
-        arrow_top.style.display = "block"
+        arrow_top.style.display = "block";
     }
 })
 
+//Function Button Arrow Up
 arrow_top.addEventListener('click', () => {
     window.scrollTo({
         top: 0,

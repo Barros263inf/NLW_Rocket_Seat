@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    z-index: 100;
     box-sizing: border-box;
 }
 
@@ -41,7 +42,7 @@ body {
     overflow-y: overlay;
     width: var(--viewport-width);
     font-family: var(--font-default);
-    background-color: #495057;
+    background-color: var(--brand-green-light-02)
 }
 
 main {
@@ -50,153 +51,12 @@ main {
 }
 
 section, footer {
-    z-index: 0;
     padding: 2.4rem;
 }
 
 /*====================CLASS====================*/
-
 .display_flex {
     display: flex;
-}
-
-/*=================HEADER MENU=================*/
-header#navigation {
-    top: 0;
-    z-index: 1;
-    position: fixed;
-    width: var(--viewport-width);
-    height: var(--header-height);
-    background-color: var(--brand-green-light);
-}
-
-nav#menu_bar {
-    width: 100%;
-    height: 100%;
-    padding: 0 2.4rem;
-    transition: all 500ms;
-    justify-content: space-between;
-}
-
-nav a.logo {
-    color: #000;
-    font-size: 2rem;
-    align-self: center;
-    text-decoration: none;
-}
-
-nav a.logo span {
-    font-size: 2.4rem;
-    font-weight: bolder;
-    color: var(--brand-green);
-}
-
-nav ion-icon.menu_icon {
-    height: 100%;
-    font-size: 2.4rem;
-    transition: all 500ms;
-    color: var(--brand-green);
-}
-
-ion-icon.menu_icon:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-nav.scroll {
-    background-color: var(--brand-green);
-}
-
-nav.scroll a.logo,
-nav.scroll a.logo span,
-nav.scroll ion-icon.menu_icon {
-    color: #fff;
-}
-
-/*=================MENU EXPENDED=================*/
-div.menu_off {
-    display: none;
-}
-
-div.menu_on {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--brand-green);
-}
-
-div#menu_exp header {
-    width: 100%;
-    padding: 0 2.4rem;
-    height: var(--header-height);
-    justify-content: space-between;
-
-}
-
-div#menu_exp a {
-    color: #fff;
-    text-decoration: none;
-}
-
-div#menu_exp>header a {
-    color: white;
-    text-decoration: none;
-}
-
-div#menu_exp>header a span {
-    color: white;
-    text-decoration: none;
-}
-
-div#menu_exp>header ion-icon {
-    color: white;
-}
-
-div#menu_exp ul.links {
-    width: 100%;
-    font-size: 2rem;
-    margin: 6rem 0 0;
-    list-style: none;
-    text-align: center;
-    font-weight: bolder;
-    flex-direction: column;
-}
-
-div#menu_exp ul.links li {
-    margin-bottom: 4.8rem;
-}
-
-div#menu_exp ul.links li a {
-    padding: 1rem;
-}
-
-div#menu_exp button.scheduling {
-    height: 5.5rem;
-    font-size: 1.8rem;
-    margin-bottom: 8rem;
-    background-color: #fff;
-    color: var(--brand-green);
-}
-
-div.menu_on ul.social_links {
-    gap: 4.2rem;
-    color: #fff;
-    font-size: 3.4em;
-    list-style: none;
-}
-
-div.menu_on ul.social_links li {
-    cursor: pointer;
-    transition: all 500ms;
-}
-
-div.menu_on ul.social_links li:hover {
-    transform: scale(1.2);
 }
 
 /*================SECTIONS COMMON=================*/
@@ -266,10 +126,157 @@ button.scheduling:hover {
     background-color: var(--brand-green-hover);
 }
 
+/*=================HEADER MENU=================*/
+header#navigation {
+    top: 0;
+    z-index: 200;
+    position: fixed;
+    width: var(--viewport-width);
+    height: var(--header-height);
+}
+
+nav#menu_bar {
+    width: 100%;
+    height: 100%;
+    padding: 0 2.4rem;
+    transition: all 500ms;
+    justify-content: space-between;
+}
+
+nav a.logo {
+    color: #000;
+    font-size: 2rem;
+    align-self: center;
+    text-decoration: none;
+}
+
+nav a.logo span {
+    font-size: 2.4rem;
+    font-weight: bolder;
+    color: var(--brand-green);
+}
+
+nav ion-icon.menu_icon {
+    height: 100%;
+    font-size: 2.4rem;
+    transition: all 500ms;
+    color: var(--brand-green);
+}
+
+ion-icon.menu_icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+nav.scroll {
+    background-color: var(--brand-green);
+}
+
+nav.scroll a.logo,
+nav.scroll a.logo span,
+nav.scroll ion-icon.menu_icon {
+    color: #fff;
+}
+
+/*=================MENU EXPENDED=================*/
+div.menu_off {
+    display: none;
+}
+
+div.menu_on {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    height: 100vh;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--brand-green);
+}
+
+div#menu_exp header {
+    padding: 0 2.4rem;
+    width: var(--viewport-width);
+    height: var(--header-height);
+    justify-content: space-between;
+}
+
+div#menu_exp a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div#menu_exp>header a {
+    color: white;
+    text-decoration: none;
+}
+
+div#menu_exp>header a span {
+    color: white;
+    text-decoration: none;
+}
+
+div#menu_exp>header ion-icon {
+    color: white;
+}
+
+div#menu_exp ul.links {
+    width: 100%;
+    font-size: 2rem;
+    margin: 6rem 0 0;
+    list-style: none;
+    text-align: center;
+    font-weight: bolder;
+    flex-direction: column;
+}
+
+div#menu_exp ul.links li {
+    margin-bottom: 4.8rem;
+}
+
+div#menu_exp ul.links li a {
+    padding: 1rem;
+}
+
+div#menu_exp button.scheduling {
+    height: 5.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 7rem;
+    background-color: #fff;
+    color: var(--brand-green);
+}
+
+div.menu_on ul.social_links {
+    gap: 4.2rem;
+    color: #fff;
+    font-size: 3.4em;
+    list-style: none;
+}
+
+div.menu_on ul.social_links li {
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+div.menu_on ul.social_links li:hover {
+    transform: scale(1.2);
+}
+
 /*============SECTION HOME==============*/
 section#home {
+    height: auto;
     padding-top: var(--header-height);
+}
+
+section#home::before{
+    top: 0;
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: var(--viewport-width);
     background-color: var(--brand-green-light);
+    height: calc( var(--header-height) + var(--section-height) );
 }
 
 section#home h4 {
@@ -306,7 +313,7 @@ section#services {
 }
 
 section#services h4 {
-    margin-top: 20rem;
+    padding-top: 10rem;
 }
 
 section#services h2 {
@@ -407,7 +414,6 @@ section#contact div>ion-icon {
     color: var(--brand-green);
 }
 
-
 section#contact img {
     width: 100%;
     max-width: 500px;
@@ -449,14 +455,19 @@ ion-icon#arrow_top {
     display: none;
     right: 1.5rem;
     color: #fff;
-    padding: .7rem;
+    padding: .8rem;
     bottom: 2.5rem;
+    cursor: pointer;
     position: fixed;
     font-size: 2.5rem;
     border-radius: 50%;
     transition: all 500ms;
     animation: arrow_on 500ms;
     background-color: var(--brand-green-hover);
+}
+
+ion-icon#arrow_top:hover{
+    transform: scale(1.3);
 }
 
 @keyframes arrow_on {
