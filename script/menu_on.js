@@ -50,9 +50,21 @@ window.addEventListener("scroll", () => {
 })
 
 //Function Button Arrow Up
-arrow_top.addEventListener('click', () => {
+arrow_top.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth"
     })
 })
+
+//Function Scroll Reveal
+ScrollReveal({
+    origin: "top",
+    distance: "30px",
+    duration: 900,
+}).reveal(`
+#home, #home img, #home #statistics, 
+#services, #services li, 
+#about , #about img ,
+#contact , #contact img,
+#footer`);

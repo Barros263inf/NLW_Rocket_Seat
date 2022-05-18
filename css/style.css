@@ -181,6 +181,7 @@ nav.scroll ion-icon.menu_icon {
 /*=================MENU EXPENDED=================*/
 div.menu_off {
     display: none;
+    transform: translateY(0%);
 }
 
 div.menu_on {
