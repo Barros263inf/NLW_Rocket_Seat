@@ -30,7 +30,7 @@
     --section-height: 1150px;
 }
 
-::selection{
+::selection, :active{
     background-color: rgba(0, 0, 0, 0);
 }
 
