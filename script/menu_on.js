@@ -60,11 +60,11 @@ arrow_top.addEventListener("click", () => {
 //Function Scroll Reveal
 ScrollReveal({
     origin: "top",
-    distance: "30px",
-    duration: 900,
+    distance: "50px",
+    duration: 1000,
 }).reveal(`
 #home, #home img, #home #statistics, 
 #services, #services li, 
-#about , #about img ,
-#contact , #contact img,
+#about , #about header, #about p, #about img ,
+#contact ,#contact header,  #contact p, #contact img,
 #footer`);
