@@ -19,7 +19,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
 </head>
 
-<body onscroll="header_background()">
+<body>
     <main>
         <header id="navigation">
             <nav id="menu_bar" class="display_flex">
@@ -70,26 +70,27 @@
                 <!--==============-->
             </nav>
         </header>
-        <!--done-->
 
         <section id="home" class="display_flex">
-            <header>
-                <h4>boas-vindas ao doctorcare 👋</h4>
-                <h1>Assistência médica simplificada para todos</h1>
-            </header>
+            <div class="wrapper">
+                <header>
+                    <h4>boas-vindas ao doctorcare 👋</h4>
+                    <h1>Assistência médica simplificada para todos</h1>
+                </header>
 
-            <p>
-                Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar
-                uma
-                cura a longo prazo.
-            </p>
+                <p>
+                    Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar
+                    uma
+                    cura a longo prazo.
+                </p>
 
-            <a href="#contact">
-                <button class="scheduling display_flex">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                    agende sua consulta
-                </button>
-            </a>
+                <a href="#contact">
+                    <button class="scheduling display_flex">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        agende sua consulta
+                    </button>
+                </a>
+            </div>
 
             <img src="assets/mulher_sorrindo.png" alt="mulher sorrindo">
 
@@ -110,147 +111,158 @@
         </section>
 
         <section id="services" class="display_flex">
-            <header>
-                <h4>serviços</h4>
-                <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
-            </header>
-
-            <div id="cards_colection" class="display_flex">
-                <ul class="cards">
-                    <li>
-                        <ion-icon name="checkmark-circle-outline"></ion-icon>
-                        <h3>Problemas digestivos</h3>
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim.
-                        </p>
-                    </li>
-
-                    <li>
-                        <ion-icon name="checkmark-circle-outline"></ion-icon>
-                        <h3>Saúde hormonal</h3>
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim.
-
-                        </p>
-                    </li>
-
-                    <li>
-                        <ion-icon name="checkmark-circle-outline"></ion-icon>
-                        <h3>Bem-estar mental</h3>
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim.
-
-                        </p>
-                    </li>
-
-                    <li>
-                        <ion-icon name="checkmark-circle-outline"></ion-icon>
-                        <h3>Cuidados pediátricos</h3>
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim.
-
-                        </p>
-                    </li>
-
-                    <li>
-                        <ion-icon name="checkmark-circle-outline"></ion-icon>
-                        <h3>Autoimune e inflamação</h3>
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim.
-
-                        </p>
-                    </li>
-
-                    <li>
-                        <ion-icon name="checkmark-circle-outline"></ion-icon>
-                        <h3>Saúde do coração</h3>
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim.
-
-                        </p>
-                    </li>
-                </ul>
+            <div class="wrapper">
+                <header>
+                    <h4>serviços</h4>
+                    <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
+                </header>
             </div>
 
+            <div class="wrapper">
+                <div id="cards_collection">
+                    <ul class="cards">
+                        <li>
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <h3>Problemas digestivos</h3>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim.
+                            </p>
+                        </li>
+
+                        <li>
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <h3>Saúde hormonal</h3>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim.
+
+                            </p>
+                        </li>
+
+                        <li>
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <h3>Bem-estar mental</h3>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim.
+
+                            </p>
+                        </li>
+
+                        <li>
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <h3>Cuidados pediátricos</h3>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim.
+
+                            </p>
+                        </li>
+
+                        <li>
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <h3>Autoimune e inflamação</h3>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim.
+
+                            </p>
+                        </li>
+
+                        <li>
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <h3>Saúde do coração</h3>
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim.
+
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="display_flex">
-            <header>
-                <h4>sobre nós</h4>
-                <h2>Entenda quem somos e por que existimos</h2>
-            </header>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-                duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-                officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                do amet sint.
-            </p>
-            <img src="assets/doutor_sorrindo_500px.png" alt="doutor sorrindo">
+            <div class="wrapper">
+                <header>
+                    <h4>sobre nós</h4>
+                    <h2>Entenda quem somos e por que existimos</h2>
+                </header>
+                <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                    consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                    officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                    sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint.
+                </p>
+            </div>
+            <div class="wrapper">
+                <img src="assets/doutor_sorrindo_500px.png" alt="doutor sorrindo">
+            </div>
         </section>
 
-        <section id="contact">
-            <header>
-                <h2>Entre em contato com a gente!</h2>
-            </header>
+        <section id="contact" class="display_flex">
+            <div class="wrapper">
+                <header>
+                    <h2>Entre em contato com a gente!</h2>
+                </header>
 
-            <address>
-                <div>
-                    <ion-icon name="location-outline"></ion-icon>
-                    <a href="https://www.google.com.br/maps/place/R.+Amauri+de+Souza,+346+-+Santa+Teresinha+de+Piraci,+Piracicaba+-+SP/"
-                        target="_blank">
-                        Rua Amauri de Souza, 346
-                    </a>
-                </div>
-                <div>
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <a href="mailto:contato@doctorcare.com">contato@doctorcare.com</a>
-                </div>
-            </address>
+                <address>
+                    <div>
+                        <ion-icon name="location-outline"></ion-icon>
+                        <a href="https://www.google.com.br/maps/place/R.+Amauri+de+Souza,+346+-+Santa+Teresinha+de+Piraci,+Piracicaba+-+SP/"
+                            target="_blank">
+                            Rua Amauri de Souza, 346
+                        </a>
+                    </div>
+                    <div>
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <a href="mailto:contato@doctorcare.com">contato@doctorcare.com</a>
+                    </div>
+                </address>
 
-            <a href="https://wa.me/5500987654321" target="_blank">
-                <button class="scheduling display_flex">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                    agende sua consulta
-                </button>
-            </a>
+                <a id="btn_whats" href="https://wa.me/5500987654321" target="_blank">
+                    <button class="scheduling display_flex">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        agende sua consulta
+                    </button>
+                </a>
+            </div>
 
-            <img src="assets/homem_no_celular_500px.png" alt="homem no celular">
-
+            <div class="wrapper">
+                <img src="assets/homem_no_celular_500px.png" alt="homem no celular">
+            </div>
         </section>
 
         <footer id="footer" class="display_flex">
-            <header>
-                <h2>DoctorCare</h2>
-                <p>&copy;2022 DoctorCare.</p>
-                <p>Todos direitos reservados.</p>
-            </header>
+            <div class="wrapeer">
+                <header>
+                    <h2>DoctorCare</h2>
+                    <p>&copy;2022 DoctorCare.</p>
+                    <p>Todos direitos reservados.</p>
+                </header>
 
-            <ul class="social_links display_flex">
-                <li>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com" target="_blank">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-
+                <ul class="social_links display_flex">
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </footer>
 
         <ion-icon id="arrow_top" name="arrow-up-outline"></ion-icon>

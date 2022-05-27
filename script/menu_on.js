@@ -2,11 +2,11 @@
 function menu(value) {
     if(value == "on"){
         menu_exp.classList.remove("menu_off");
-        menu_exp.classList.add("menu_on")
+        menu_exp.classList.add("menu_on");
     }
     else if(value == "off"){
         menu_exp.classList.remove("menu_on");
-        menu_exp.classList.add("menu_off")
+        menu_exp.classList.add("menu_off");
     }
 
     /*3ª Solution

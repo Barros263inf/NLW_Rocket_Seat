@@ -12,26 +12,23 @@
 
 :root {
     /*Primary Colors*/
-    --brand-green: #00856F;
-    --brand-beige: #FFFAF1;
-    --brand-green-light: #DCE9E2;
-    --brand-green-hover: #00453A;
-    --brand-green-light-02: #F7F9F9;
+    --hue: 110;
+    --brand-beige: hsl(39, 100%, 97%);
+    --brand-green: hsl(var(--hue), 100%, 26%);
+    --brand-green-light: hsl(calc(var(--hue) - 22), 23%, 89%);
+    --brand-green-hover: hsl(var(--hue), 100%, 14%);
+    --brand-green-light-02: hsl(calc(var(--hue) + 10), 14%, 97%);
     /*Secondary Colors*/
-    --gray-headline: #212529;
-    --gray-paragraph: #495057;
+    --gray-headline: hsl(210, 11%, 15%);
+    --gray-paragraph: hsl(210, 9%, 31%);
     /*Fonts*/
     --font-default: 'DM Sans', sans-serif;
     /*Viewport Dimensions*/
     font-size: 62.5%;
     /*1rem = 10px*/
     --header-height: 7.2rem;
-    --viewport-width: 385px;
     --section-height: 1150px;
-}
-
-::selection, :active{
-    background-color: rgba(0, 0, 0, 0);
+    --viewport-width: min(50rem, 100%);
 }
 
 html, body {
@@ -41,17 +38,15 @@ html, body {
 }
 
 body {
-    margin: auto;
     position: relative;
+    overflow-x: hidden;
     overflow-y: overlay;
-    width: var(--viewport-width);
     font-family: var(--font-default);
     background-color: var(--brand-green-light-02)
 }
 
 main {
     position: relative;
-    width: var(--viewport-width);
 }
 
 section, footer {
@@ -61,6 +56,10 @@ section, footer {
 /*====================CLASS====================*/
 .display_flex {
     display: flex;
+}
+
+.wrapper{
+    width: min(50rem, 100%);
 }
 
 /*================SECTIONS COMMON=================*/
@@ -73,15 +72,11 @@ section {
 
 h1 {
     font-size: 3.4rem;
-    min-width: 300px;
-    max-width: 500px;
     color: var(--gray-headline);
 }
 
 h2 {
     font-size: 3rem;
-    min-width: 300px;
-    max-width: 500px;
     color: var(--gray-headline);
 }
 
@@ -94,13 +89,12 @@ h4 {
 
 p {
     font-size: 1.8rem;
-    max-width: 500px;
     line-height: 2.7rem;
     margin: 2.4rem 0 3.2rem;
     color: var(--gray-paragraph);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -108,13 +102,12 @@ button.scheduling {
     gap: 1.6rem;
     border: none;
     color: #fff;
-    height: 5.5rem;
     cursor: pointer;
     font-size: 1.4rem;
-    margin-bottom: 6rem;
-    padding: 1.6rem 3em;
+    width: fit-content;
     border-radius: 8rem;
     align-items: center;
+    padding: 1.6rem 3rem;
     transition: all 500ms;
     justify-content: center;
     text-transform: uppercase;
@@ -133,9 +126,9 @@ button.scheduling:hover {
 /*=================HEADER MENU=================*/
 header#navigation {
     top: 0;
+    width: 100%;
     z-index: 200;
     position: fixed;
-    width: var(--viewport-width);
     height: var(--header-height);
 }
 
@@ -143,7 +136,7 @@ nav#menu_bar {
     width: 100%;
     height: 100%;
     padding: 0 2.4rem;
-    transition: all 500ms;
+    transition: all 200ms;
     justify-content: space-between;
 }
 
@@ -185,7 +178,6 @@ nav.scroll ion-icon.menu_icon {
 /*=================MENU EXPENDED=================*/
 div.menu_off {
     display: none;
-    transform: translateY(0%);
 }
 
 div.menu_on {
@@ -201,8 +193,8 @@ div.menu_on {
 }
 
 div#menu_exp header {
+    width: 100%;
     padding: 0 2.4rem;
-    width: var(--viewport-width);
     height: var(--header-height);
     justify-content: space-between;
 }
@@ -245,7 +237,6 @@ div#menu_exp ul.links li a {
 }
 
 div#menu_exp button.scheduling {
-    height: 5.5rem;
     font-size: 1.8rem;
     margin-bottom: 7rem;
     background-color: #fff;
@@ -274,22 +265,33 @@ section#home {
     padding-top: var(--header-height);
 }
 
-section#home::before{
+section#home::before {
     top: 0;
     z-index: 0;
     content: "";
+    width: 100%;
     position: absolute;
-    width: var(--viewport-width);
     background-color: var(--brand-green-light);
-    height: calc( var(--header-height) + var(--section-height) );
+    height: calc(var(--header-height) + 108rem);
+}
+
+section#home div.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section#home h4 {
     padding-top: 4rem;
 }
 
+section#home img {
+    margin-top: 6rem;
+}
+
 div#statistics {
-    width: 100%;
+    width: min(500px, 100%);
     height: 47rem;
     padding: 4rem 0;
     align-items: center;
@@ -325,40 +327,47 @@ section#services h2 {
     margin-bottom: 6rem;
 }
 
-div#cards_colection {
+div#cards_collection {
     width: 100%;
-    margin: auto;
+    margin-bottom: 10rem;
+}
+
+div#cards_collection ul{
+    gap: 3.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: row;*/
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-div#cards_colection ul li {
-    width: 100%;
+div#cards_collection ul li {
     display: flex;
     padding: 2.4rem;
     list-style: none;
-    max-width: 500px;
-    margin: 0 0 3.2rem;
     border-radius: .5em;
     flex-direction: column;
+    /*width: min(50rem, 30%);*/
     background-color: #fff;
     border: 2px solid var(--brand-green-light);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.098);
 }
 
-div#cards_colection ion-icon {
+div#cards_collection ion-icon {
     font-size: 2.4rem;
     border-radius: 50%;
     color: var(--brand-green);
     background-color: var(--brand-green-light-02);
 }
 
-div#cards_colection h3 {
+div#cards_collection h3 {
     margin: .5em 0;
     text-align: left;
     font-size: 2.4rem;
 }
 
-div#cards_colection p {
+div#cards_collection p {
     width: 100%;
     text-align: left;
     font-size: 1.6rem;
@@ -366,33 +375,42 @@ div#cards_colection p {
 
 /*===============SECTION ABOUT===================*/
 section#about {
+    /*gap: 6.7rem;*/
     height: auto;
     text-align: left;
-    padding-top: 10rem;
+    padding-block: 10rem;
+    /*flex-direction: row;*/
+    flex-direction: column;
     background-color: var(--brand-beige);
 }
 
-section#about p {
-    margin-bottom: 6rem;
+/*
+section#about div:nth-child(1){
+    order: 1;
 }
 
+section#about div:nth-child(2){
+    order: 0;
+}*/
+
 section#about img {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 10rem;
+    width: min(50rem, 100%);
+    /*margin: 6rem auto 10rem;*/
 }
 
 /*===============SECTION CONTACT===================*/
 section#contact {
     height: auto;
-    text-align: left;
+    /*flex-direction: row;*/
+    align-items: center;
+    justify-content: left;
+    padding-block: 10rem;
     background-color: #fff;
 }
 
 section#contact h2 {
     width: 29.7rem;
     font-size: 3rem;
-    margin: 10rem 0 3.2rem;
 }
 
 section#contact address {
@@ -420,16 +438,27 @@ section#contact div>ion-icon {
 }
 
 section#contact img {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 0 10rem;
+    margin-top: 6rem;
+    width: min(50rem, 100%);
 }
 
 /*====================FOOTER=====================*/
 footer#footer {
     color: #fff;
+    /*flex-direction: row;*/
+    align-items: center;
     flex-direction: column;
+    /*justify-content: space-between;*/
+    justify-content: center;
     background-color: var(--brand-green);
+}
+
+footer#footer div.wrapper{
+    text-align: left;
+}
+
+footer#footer header{
+    height: 100%;
 }
 
 footer#footer h2 {
@@ -444,21 +473,22 @@ footer#footer p {
     margin-bottom: 1.2rem;
 }
 
-footer#footer>ul {
+footer#footer ul {
     gap: 3.2rem;
+    height: 100%;
     list-style: none;
     margin: 2rem 0 6rem;
 }
 
-footer#footer>ul li a {
+footer#footer ul li a {
     color: #fff;
     font-size: 2.4rem;
 }
 
 /*===================ARROW TOP===================*/
 ion-icon#arrow_top {
+    right: 2rem;
     display: none;
-    right: 1.5rem;
     color: #fff;
     padding: .6rem;
     bottom: 2.5rem;
@@ -471,14 +501,18 @@ ion-icon#arrow_top {
     background-color: var(--brand-green);
 }
 
-ion-icon#arrow_top:hover{
+ion-icon#arrow_top:hover {
     transform: scale(1.2);
     background-color: var(--brand-green-hover);
 }
 
 @keyframes arrow_on {
     0% {
-        transform: translateY(50px);
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(100%);
     }
 }
 
@@ -508,7 +542,7 @@ html::-webkit-scrollbar-thumb {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     :root {
         --viewport-width: 100%;
     }
