@@ -303,6 +303,7 @@ section#home h4 {
 
 section#home img {
     margin-top: 6rem;
+    width: min(30rem, 100%);
 }
 
 div#statistics {
