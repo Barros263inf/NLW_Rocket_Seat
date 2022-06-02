@@ -32,6 +32,7 @@ function menu(value) {
 
 //Function Menu Bar Scroll
 window.addEventListener("scroll", () => {
+   
     if (scrollY > 0) {
         menu_bar.classList.add("scroll");
     }
