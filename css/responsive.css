@@ -171,6 +171,7 @@
         height: 100%;
         margin-bottom: -2.5rem;
     }
+    
     section#home img {
         margin-top: 15rem;
         width: min(70rem, 100%);
@@ -192,6 +193,7 @@
     div#statistics div + div{
         border-left: 2px solid var(--brand-green);
     }
+
     /*==================SERVICES=================*/
  
     section#services ul.cards {
