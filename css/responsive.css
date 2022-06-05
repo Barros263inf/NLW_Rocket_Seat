@@ -54,11 +54,11 @@
     }
 
     /*wHEN ACTIVE BY SCROLL*/
-    div#menu_exp ul.links li a.active {
+    div#menu_exp ul.links li a.on {
         font-weight: bolder;
     }
 
-    div#menu_exp ul.links li a.active::after {
+    div#menu_exp ul.links li a.on::after {
         width: 0%;
         content: "";
         height: 2px;
@@ -70,7 +70,7 @@
         background-color: var(--brand-green)
     }
 
-    div#menu_exp ul.links li a.active::after {
+    div#menu_exp ul.links li a.on::after {
         width: 100%;
         padding-inline: 1rem;
     }
