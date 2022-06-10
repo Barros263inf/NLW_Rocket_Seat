@@ -190,7 +190,18 @@ div.menu_on {
     position: absolute;
     align-items: center;
     flex-direction: column;
+    animation: show_menu_exp 300ms;
     background-color: var(--brand-green);
+}
+
+@keyframes show_menu_exp {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+    
 }
 
 div#menu_exp header {
