@@ -8,7 +8,7 @@ desenvolvimento web. <br>
 
 <br>
 
-### ⚙️Status: Em desenvolvimento...⚙️
+### ⚙️Status: Completed!⚙️
 
 <br>
 
