@@ -423,6 +423,7 @@ section#contact {
 section#contact h2 {
     width: 29.7rem;
     font-size: 3rem;
+    text-align: left;
 }
 
 section#contact address {
