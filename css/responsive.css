@@ -254,6 +254,9 @@
     }
 
     /*===================FOOTER===================*/
+    footer#footer{
+        padding-bottom: 5rem;
+    }
     footer#footer .wrapper {
         width: 100%;
         display: flex;
