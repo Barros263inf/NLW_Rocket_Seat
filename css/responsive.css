@@ -11,8 +11,9 @@
     section, footer {
         padding: 0 12rem 0 12rem;
     }
-    .wrapper{
-        width: min(165rem,100%);
+
+    .wrapper {
+        width: min(165rem, 100%);
     }
 
     /*===================MENU===================*/
@@ -91,13 +92,14 @@
         transition: width 500ms;
         background-color: var(--brand-green)
     }
+
     /*=======================================*/
 
     div#menu_exp ul.links li a:hover::after {
         width: 100%;
         padding-inline: 1rem;
     }
-    
+
     div#menu_exp a[href] button {
         margin: 0;
         width: 25rem;
@@ -107,7 +109,7 @@
         transform: initial;
         background-color: rgba(0, 0, 0, 0);
     }
-    
+
     nav div#menu_exp a[href] button:hover {
         color: #fff;
         filter: brightness(1.3);
@@ -139,45 +141,46 @@
     nav.scroll div#menu_exp ul.links li a::after {
         background-color: #fff;
     }
+
     /*==================HOME=================*/
-    section#home::before{
+    section#home::before {
         height: calc(100% - var(--header-height));
     }
 
-    section#home div.wrapper{
+    section#home div.wrapper {
         row-gap: 5rem;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: 
-        'A B'
-        'C C';
+        grid-template-areas:
+            'A B'
+            'C C';
     }
 
-    section#home div.wrapper h1{
+    section#home div.wrapper h1 {
         font-size: 5.2rem;
     }
 
-    section#home .col_A{
+    section#home .col_A {
         display: flex;
         text-align: left;
         align-self: center;
         justify-content: left;
-        width: min(60rem,100%);
+        width: min(60rem, 100%);
         flex-direction: column;
         align-items: flex-start;
     }
 
-    section#home .col_B{
+    section#home .col_B {
         height: 100%;
         margin-bottom: -2.5rem;
     }
-    
+
     section#home img {
         margin-top: 15rem;
         width: min(70rem, 100%);
     }
 
-    div#statistics{
+    div#statistics {
         width: auto;
         grid-area: C;
         height: auto;
@@ -186,16 +189,16 @@
         justify-content: center;
     }
 
-    div#statistics div{
+    div#statistics div {
         flex: 1;
     }
 
-    div#statistics div + div{
+    div#statistics div+div {
         border-left: 2px solid var(--brand-green);
     }
 
     /*==================SERVICES=================*/
- 
+
     section#services ul.cards {
         width: 100%;
         flex-wrap: wrap;
@@ -254,9 +257,10 @@
     }
 
     /*===================FOOTER===================*/
-    footer#footer{
+    footer#footer {
         padding-bottom: 5rem;
     }
+
     footer#footer .wrapper {
         width: 100%;
         display: flex;

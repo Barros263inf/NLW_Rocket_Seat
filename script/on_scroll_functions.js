@@ -2,7 +2,7 @@ window.addEventListener("scroll", on_scroll)
 
 on_scroll();
 
-function on_scroll(){
+function on_scroll() {
     menubar_active_on_scroll();
     show_arrow_button_on_scroll();
     active_menu_at_current_section_on_scroll(home);
@@ -30,7 +30,7 @@ function show_arrow_button_on_scroll() {
 function active_menu_at_current_section_on_scroll(current_section) {
 
     const target_line = scrollY + innerHeight / 2;
-    
+
     const section_id = current_section.getAttribute("id")
     const section_top = current_section.offsetTop;
     const section_height = current_section.offsetHeight;
@@ -38,11 +38,11 @@ function active_menu_at_current_section_on_scroll(current_section) {
 
     const menu_element = document.querySelector(`.links li a[href*=${section_id}]`);
 
-    
-    if(section_top <= target_line && section_end >= target_line){
+
+    if (section_top <= target_line && section_end >= target_line) {
         menu_element.classList.add("on");
     }
-    else{
+    else {
         menu_element.classList.remove("on");
 
     }
