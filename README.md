@@ -1,10 +1,10 @@
 #   🩺 Doctor Care 🩺
 ###  🚀 NLW_Rocket_Seat 8ª Edição 🚀 
 <p>
-    Projeto desenvolvido no evento NLW RocketSeat. <br>
-    A proposta deste projeto é desenvolver uma página, que<br>
-    traga novos desáfios, implementando funcionalidades básicas <br>
-    e buscando adiquirir experiência no desenvolvimento web.  <br>
+    Projeto desenvolvido no evento NLW RocketSeat. 
+    A proposta deste projeto é desenvolver uma página, que
+    traga novos desáfios, implementando funcionalidades básicas 
+    e buscando adiquirir experiência no desenvolvimento web. 
 </p>
 
 <br>
