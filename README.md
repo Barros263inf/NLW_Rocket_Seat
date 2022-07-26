@@ -1,10 +1,24 @@
+<div align="center">
+
 #   🩺 Doctor Care 🩺
-###  🚀 NLW_Rocket_Seat 8ª Edição 🚀 
+
+</div>
+
+<div align="center">
+
+### NLW Rocket Seat 8ª Edição
+
+</div>
+
+<div align="justify">
 
 Projeto desenvolvido no evento NLW RocketSeat.
 A proposta deste projeto é desenvolver uma página, que
 traga novos desáfios, implementando funcionalidades básicas
 e buscando adiquirir experiência no desenvolvimento web.  
+
+</div>
+
   
 <br>
 
@@ -25,7 +39,13 @@ e buscando adiquirir experiência no desenvolvimento web.
 
 ---
 
+
+<div align="center">
+
 ## 🤘 Sobre mim 🎸
 
 Desenvolvendo nas horas livres...
 [@Barros263inf](https://www.github.com/Barros263inf)
+
+</div>
+
