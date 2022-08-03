@@ -33,7 +33,7 @@ e buscando adiquirir experiência no desenvolvimento web.
 
 📄 Licença [MIT](https://choosealicense.com/licenses/mit/) 📄  
 ⚙️ Status: Completed! ⚙️   
-🔗 Link do projeto [GitHub Pages](https://barros263inf.github.io/nlw_rocket_seat/)🔗
+🔗 Link do projeto [GitHub Pages]( https://barros263inf.github.io/doctor_care_nlw_8_edition/)🔗
 
 <br>
 
