@@ -23,6 +23,7 @@
     --gray-paragraph: hsl(210, 9%, 31%);
     /*Fonts*/
     --font-default: 'DM Sans', sans-serif;
+
     /*Viewport Dimensions*/
     font-size: 62.5%;
     /*1rem = 10px*/
